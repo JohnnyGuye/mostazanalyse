@@ -10,7 +10,29 @@ export const routes: Routes = [
         redirectTo: ''
     },
     {
-        path: '*',
+        path: 'cattaga',
+        pathMatch: 'prefix',
+        children: [
+            {
+                path: '',
+                loadComponent: () => import('./pages/cattaga/cattaga.page').then(m => m.CattagaPage),
+            },
+            {
+                path: 'kiceki',
+                loadComponent: () => import('./pages/kiceki/kiceki.page').then(m => m.KicekiPage)
+            },
+            {
+                path: 'clips',
+                loadComponent: () => import('./pages/clips/clips.page').then(m => m.ClipsPage)
+            },
+            {
+                path: '**',
+                redirectTo: ''
+            }
+        ]
+    },
+    {
+        path: '**',
         redirectTo: ''
     }
 ];

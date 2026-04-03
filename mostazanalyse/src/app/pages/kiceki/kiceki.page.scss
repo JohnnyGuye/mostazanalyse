@@ -1,0 +1,12 @@
+.kiceki-grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .kiceki-indiv {
+        background: linear-gradient(45deg,red, blue);
+        min-width: 60px;
+        height: 200px;
+        // background: url("/src/app/assets/images/placeholder.jpg") center/cover;
+    }
+}
